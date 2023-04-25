@@ -35,18 +35,6 @@ img {
 
 }
 
-footer img{
-  height: 5em;
-  width: 5em;
-  position:fixed;
-  bottom:0;
-}
-
-footer p{
-    position:fixed;
-    bottom:0;
-    padding-left:6em;
-}
 
 .carousel-inner {
 outline-style: solid;

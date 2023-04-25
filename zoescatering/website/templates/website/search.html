@@ -1,0 +1,18 @@
+{% extends 'website/layout.html' %}
+
+
+{% block content %}
+ <h1>Search results...</h1>
+	<div class="row">
+    {% for product in data %}
+		<div class="col-md-3 mb-4">
+			<div class="card shadow">
+			  <a href="/website/product/{{product.slug}}/{{product.id}}"><img src="/media/{{product.product.image}}" class="card-img-top" alt="{{product.title}}"></a>
+			  <div class="card-body">
+			    <h6 class="card-text"><a href="/website/product/{{product.slug}}/{{product.id}}">{{product.title}}</a></h6>
+			  </div>
+			</div>
+		</div>
+    {% endfor %}
+	</div>
+{% endblock %}

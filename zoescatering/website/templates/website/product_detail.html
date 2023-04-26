@@ -20,7 +20,7 @@
 					<th>Party Sizes</th>
 					<td>
 						{% for size in sizes %}
-						<button data-price="{{size.price}}" class="btn btn-outline-secondary btn-sm choose-size color{{size.color__id}}">{{size.size__title}}</button>
+						<button data-price="{{size.price}}" class="btn btn-outline-secondary choose-color choose-size">{{size.size__title}}</button>
 						{% endfor %}
 					</td>
 				</tr>
@@ -33,7 +33,7 @@
 			<div class="input-group my-3" style="width:30%;">
 			  <input type="number" value="1" class="form-control product-qty-{{data.id}}" id="productQty" />
 			  <div class="input-group-append">
-			  	<input type="hidden" class="product-image-{{data.id}}" value="{{data.productattribute_set.first.image}}" />
+			  	<input type="hidden" class="product-image-{{data.id}}" value="{{data.product.image}}" />
 		          <input type="hidden" class="product-id-{{data.id}}" value="{{data.id}}" />
 		          <input type="hidden" class="product-title-{{data.id}}" value="{{data.title}}" />
 			    <button class="btn btn-primary btn-sm add-to-cart" data-index="{{data.id}}" type="button" id="addToCartBtn"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
@@ -49,7 +49,7 @@
 			<table class="table table-bordered">
 				<tr>
 					<th>Category</th>
-					<td><a href="/website/category-product-list/{{data.category.id}}">{{data.category.title}}</a></td>
+					<td><a href="/category-product-list/{{data.category.id}}">{{data.category.title}}</a></td>
 				</tr>
 				<tr>
 					<th>Description</th>

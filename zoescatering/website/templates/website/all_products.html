@@ -9,7 +9,7 @@
 		<div class="col-md-3">
 			{% include 'website/filters.html' %}
 		</div>
-		<div class="col-md-9">
+		<div class="col-md-8">
 			<!-- Products -->
 			<h3 class="mb-4 border-bottom pb-1">
 				Products
@@ -19,9 +19,9 @@
 				{% for product in data %}
 				<div class="col-lg-4 col-md-6 mb-4 product-box">
 					<div class="card shadow">
-					  <a href="/website/product/{{product.slug}}/{{product.id}}"><img src="/media/product_img/{{product.image}}" class="card-img-top" alt="{{product.title}}"></a>
+					  <a href="/product/{{product.slug}}/{{product.id}}"><img src="/media/{{product.image}}" class="card-img-top" alt="{{product.title}}"></a>
 					  <div class="card-body">
-					    <h5 class="card-text"><a href="/website/product/{{product.slug}}/{{product.id}}">{{product.title}}</a></h5>
+					    <h5 class="card-text"><a href="/product/{{product.slug}}/{{product.id}}">{{product.title}}</a></h5>
 					    <h6>$ <span class="product-price-{{product.id}}">{{product.productattribute_set.first.price}}</span></h6>
 					  </div>
 					  	<div class="card-footer">

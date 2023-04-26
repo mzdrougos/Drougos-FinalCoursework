@@ -96,7 +96,7 @@ def loginPage(request):
 
 def logoutUser(request):
     logout(request)
-    return redirect('website/login')
+    return redirect('login')
 
 
 def filter_data(request):

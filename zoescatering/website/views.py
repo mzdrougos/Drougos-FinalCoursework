@@ -1,11 +1,7 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm
-from django.forms import inlineformset_factory
-from .forms import RegisterForm, ReviewAdd
+from .forms import RegisterForm
 from django.contrib import messages
 from .models import *
-from django.conf import settings
-from django.db.models import Avg
 from django.template.loader import render_to_string
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
